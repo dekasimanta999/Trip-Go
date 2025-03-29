@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tour Packages</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="logo">
+      <img src="images/Untitled design.png" alt="Your Brand Logo">
+    </div>
+    <h1 class="fade-in">Explore The World</h1>
+    <p class="fade-in delay-1">Find the perfect tour package for your next adventure</p>
+  </header>
+  <section class="filters fade-in delay-2">
+    <input type="text" id="search" placeholder="Search by destination..." onkeyup="filterTours()">
+    <select id="price-filter" onchange="filterTours()">
+      <option value="all">All Prices</option>
+      <option value="low">Below ₹30,000</option>
+      <option value="medium">₹30k - ₹150k</option>
+      <option value="high">Above ₹150k</option>
+    </select>
+  </section>
+  <section class="tour-container" id="tour-list">
+    <div class="tour-card slide-in" data-price="medium">
+      <img src="images/shifaaz-shamoon-qtbV_8P_Ksk-unsplash.jpg" alt="Maldives">
+      <h3>Maldives</h3>
+      <p>7 Days | Beach Paradise</p>
+      <p>Luxury beach & water villa stay</p>
+      <span class="price">₹1,50,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="low">
+      <img src="images/aron-visuals-1kdIG_258bU-unsplash.jpg" alt="Bali">
+      <h3>Bali</h3>
+      <p>5 Days | Tropical Escape</p>
+      <p>Cultural, nature, and adventure mix</p>
+      <span class="price">₹80,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/tim-trad-BYPMtjYMEyk-unsplash (1).jpg" alt="Switzerland">
+      <h3>Swiss Alps</h3>
+      <p>10 Days | Premium Getaway</p>
+      <p>Scenic mountain tours and activities</p>
+      <span class="price">₹2,00,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/ashim-d-silva-CwJb7ly-iqc-unsplash (1).jpg" alt="Dubai" style="width:500px;height:450px;">
+      <h3>Dubai, UAE</h3>
+      <p>7 Days | Modern Luxury</p>
+      <p>City tours, desert safari, shopping</p>
+      <span class="price">₹90,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/dan-freeman-7Zb7kUyQg1E-unsplash (2).jpg" alt="Sydney, Australia">
+      <h3>Sydney, Australia</h3>
+      <p>10 Days | Harbour Vibes</p>
+      <p>City, coastal & landmark tours</p>
+      <span class="price">₹1,80,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/chris-czermak-gZKzBhsO6KY-unsplash (2).jpg" alt="Rome, Italy" style="height: 10;">
+      <h3>Rome, Italy</h3>
+      <p>7 Days | Timeless Charm</p>
+      <p>Historical sites and cuisine</p>
+      <span class="price">₹1,60,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/julius-drost-sf8b4ucpdkg-unsplash.jpg" alt="New York, USA">
+      <h3>New York, USA</h3>
+      <p>7 Days | Never Sleeps</p>
+      <p>Iconic city experiences</p>
+      <span class="price">₹1,70,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/bhaskarjyoti-das-EW6ylTlIwME-unsplash (2).jpg" alt="Assam">
+      <h3>Assam, India</h3>
+      <p>4 Days | Tea Paradise</p>
+      <p>Tea gardens & nature escapes</p>
+      <span class="price">₹80,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/iftekhar-nibir-XKCFg-wJx8M-unsplash (1).jpg" alt="Meghalaya">
+      <h3>Meghalaya, India</h3>
+      <p>4 Days | Abode of Clouds</p>
+      <p>Scenic landscapes & waterfalls</p>
+      <span class="price">₹65,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/annie-spratt-75gcu08p9TY-unsplash.jpg" alt="Agra" style="width: 100%;">
+      <h3>Agra</h3>
+      <p>3 Days | Taj Majesty</p>
+      <p>Taj Mahal & historical tours</p>
+      <span class="price">₹50,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/aditya-chache-PQRGTbf_hQg-unsplash-2.jpg" alt="Himachal Pradesh">
+      <h3>Himachal Pradesh</h3>
+      <p>7 Days | Mountain Escape</p>
+      <p>Hill station & adventure trips</p>
+      <span class="price">₹70,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/jezael-melgoza-To5wAJDt1IM-unsplash (1).jpg" alt="Tokyo, Japan" style="width: 100%;">
+      <h3>Tokyo, Japan</h3>
+      <p>7 Days | Vibrant Culture</p>
+      <p>Modern meets tradition</p>
+      <span class="price">₹1,80,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/sunil-ray-ycwsyKYBo_g-unsplash.jpg" alt="Mumbai, Taj hotel">
+      <h3>Mumbai</h3>
+      <p>3 Days | City of Dreams</p>
+      <p>City tours, markets, and nightlife</p>
+      <span class="price">₹35,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+    <div class="tour-card slide-in" data-price="high">
+      <img src="images/jannes-jacobs-NfsB3jPVlcM-unsplash (1).jpg" alt="Varanasi" style="width: 100%;">
+      <h3>Varanasi</h3>
+      <p>3 Days | Spiritual Heart</p>
+      <p>Spiritual tours & cultural visits</p>
+      <span class="price">₹30,000</span>
+      <button class="book-btn">Book Now</button>
+    </div>
+  </section>
+</body>
+</html>

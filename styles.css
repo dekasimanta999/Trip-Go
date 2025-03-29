@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Logo Styles */
+/* Default style for larger screens (desktop) */
+.logo-container {
+  position: absolute;
+  top: 20px;; /* Adjust as needed */
+  left: 20px; /* Logo stays on the left for desktop */
+}
+
+.logo {
+  width: 100px; /* Default size */
+  height: auto;
+}
+
+/* Style for mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .logo-container {
+    position: absolute;
+      top: 10px; /* Adjust as needed */
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+  }
+
+  .logo {
+      width: 120px; /* Slightly bigger for mobile */
+  }
+}
+
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Hero Section */
+.hero {
+  background: rgb(0, 0, 0);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Filters Section - Now aligned properly */
+.filters {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  justify-content: center; /* Centers the filters */
+  align-items: center; /* Aligns them properly */
+  gap: 10px; /* Adds spacing between elements */
+  padding: 20px;
+  background: rgb(153, 184, 41);
+}
+
+.filters input, .filters select {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  transition: transform 0.3s;
+  width: 250px; /* Adjust the width */
+}
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+  .filters {
+      flex-direction: column; /* Stacks filters vertically on mobile */
+  }
+
+  .filters input, .filters select {
+      width: 80%; /* Makes input fields take most of the screen width */
+  }
+}
+
+/* Tour Container */
+.tour-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 30px;
+}
+
+/* Tour Cards */
+.tour-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.tour-card img {
+  width: auto;
+  height: 450px;
+  object-fit: cover;
+}
+.tour-card h3 {
+  margin: 15px 0 5px;
+}
+.price {
+  display: block;
+  color: rgb(41, 115, 115);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Button Styles */
+.book-btn {
+  background: rgb(41, 115, 115);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-bottom: 20px;
+}
+.book-btn:hover {
+  background: rgb(33, 95, 95);
+  transform: scale(1.05);
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1.05); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Fade-in Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+.delay-1 {
+  animation-delay: 0.5s;
+}
+.delay-2 {
+  animation-delay: 1s;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Slide-in Animation for Cards */
+.slide-in {
+  /* Intersection Observer will trigger the final state */
+}
